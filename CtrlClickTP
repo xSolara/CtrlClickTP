@@ -4,6 +4,7 @@ while wait(0.3) do
 local plr = game.Players.LocalPlayer
 local chr = plr.Character
 local rootpart = chr:FindFirstChild("HumanoidRootPart")
+local Head = chr:FindFirstChild("Head")
 local mouse = plr:GetMouse()
 
 uis.InputBegan:Connect(function(input)
@@ -28,8 +29,13 @@ end)
 mouse.Button1Down:Connect(function()
 if Ctrl == true then
 local targetPosition = mouse.Hit.Position
+local targetObject = mouse.Target
+
+
 
 rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,10,0))
+
+
 
 
 end
