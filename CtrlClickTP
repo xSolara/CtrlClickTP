@@ -33,7 +33,7 @@ local targetObject = mouse.Target
 
 
 
-rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,10,0))
+rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,4,0))
 
 
 
