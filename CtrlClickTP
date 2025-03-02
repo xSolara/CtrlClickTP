@@ -29,7 +29,7 @@ mouse.Button1Down:Connect(function()
 if Ctrl == true then
 local targetPosition = mouse.Hit.Position
 
-rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,20,0))
+rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,10,0))
 
 
 end
