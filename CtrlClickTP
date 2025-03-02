@@ -1,0 +1,40 @@
+local uis = game:GetService("UserInputService")
+local Ctrl = false
+while wait(0.3) do
+local plr = game.Players.LocalPlayer
+local chr = plr.Character
+local rootpart = chr:FindFirstChild("HumanoidRootPart")
+local mouse = plr:GetMouse()
+
+uis.InputBegan:Connect(function(input)
+
+if input.KeyCode == Enum.KeyCode.LeftControl then
+
+Ctrl = true
+end
+
+end)
+
+
+uis.InputEnded:Connect(function(input)
+
+if input.KeyCode == Enum.KeyCode.LeftControl then
+
+Ctrl = false
+end
+
+end)
+
+mouse.Button1Down:Connect(function()
+if Ctrl == true then
+local targetPosition = mouse.Hit.Position
+
+rootpart.CFrame = CFrame.new(targetPosition+Vector3.new(0,20,0)
+
+
+end
+
+
+end)
+
+end
